@@ -60,6 +60,16 @@ public class Utente {
 		this.dateCreated = dateCreated;
 	}
 	
+	
+	
+	public Utente( String nome, String cognome, String username, Date dateCreated) {
+		super();
+		this.username = username;
+		this.nome = nome;
+		this.cognome = cognome;
+		this.dateCreated = dateCreated;
+	}
+
 	public Long getId() {
 		return id;
 	}

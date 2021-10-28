@@ -33,44 +33,33 @@
 							<h6 class="card-title">I campi con <span class="text-danger">*</span> sono obbligatori</h6>
 		
 		
-							<form method="post" action="ExecuteSearchFilmServlet" class="row g-3" >
+							<form method="post" action="ExecuteSearchUtenteServlet" class="row g-3" >
 							
 							
 								<div class="col-md-6">
-									<label>Titolo</label>
-									<input type="text" name="titolo" id="titolo" class="form-control" placeholder="Inserire il titolo" >
+									<label>Nome:</label>
+									<input type="text" name="nome" id="nome" class="form-control" placeholder="Inserire il nome" >
 								</div>
 								
 								<div class="col-md-6">
-									<label>Genere</label>
-									<input type="text" name="genere" id="genere" class="form-control" placeholder="Inserire il genere" >
+									<label>Cognome</label>
+									<input type="text" name="cognome" id="cognome" class="form-control" placeholder="Inserire il cognome" >
+								</div>
+								
+								<div class="col-md-6">
+									<label>Username:</label>
+									<input type="text" name="username" id="username" class="form-control" placeholder="Inserire l'username" >
 								</div>
 							
 								<div class="col-md-6">
-									<label>Data di Pubblicazione</label>
-	                        		<input class="form-control" id="dataPubblicazione" type="date" placeholder="dd/MM/yy" 
-	                        				title="formato : gg/mm/aaaa"  name="dataPubblicazione"  >
+									<label>Data Creazione:</label>
+	                        		<input class="form-control" id="dateCreated" type="date" placeholder="dd/MM/yy" 
+	                        				title="formato : gg/mm/aaaa"  name="dateCreated"  >
 								</div>
-								
-								<div class="col-md-6">
-									<label>Durata (minuti)</label>
-									<input type="number" class="form-control" name="minutiDurata" id="minutiDurata" placeholder="Inserire la durata" >
-								</div>
-								
-								
-								<div class="col-md-6">
-									<label for="regista.id">Regista</label>
-								    <select class="form-control" id="regista.id" name="regista.id">
-								    	<option value="" selected> -- Selezionare una voce -- </option>
-								      	<c:forEach items="${registi_list_attribute }" var="registaItem">
-								      		<option value="${registaItem.id}" >${registaItem.nome } ${registaItem.cognome }</option>
-								      	</c:forEach>
-								    </select>
-								</div>
+	
 								
 								<div class="col-12">
 									<button type="submit" name="submit" value="submit" id="submit" class="btn btn-primary">Conferma</button>
-									<a class="btn btn-outline-primary ml-2" href="PrepareInsertFilmServlet">Add New</a>
 									<input class="btn btn-outline-warning" type="reset" value="Ripulisci">
 								</div>
 								
